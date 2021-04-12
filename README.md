@@ -42,4 +42,12 @@ git commit -m "commit mensaje"
 git push heroku main
 ```
 
-## 
+## Configurar variables de entorno en Heroku
+### removemos el archivo .env del seguimiento
+```
+git rm .env --cached
+
+heroku config
+heroku config:set <VAR>"<VALUE>" 
+heroku push heroku main
+```
