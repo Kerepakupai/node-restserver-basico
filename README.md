@@ -30,5 +30,16 @@ git push --tags
 
 ## Subir aplicacion a Heroku
 ```
-
+heroku login
+heroku git:remote -a kerepakupai-node-webserver
+git push heroku main
 ```
+
+## Subir cambios a Heroku
+```
+git add .
+git commit -m "commit mensaje"
+git push heroku main
+```
+
+## 
