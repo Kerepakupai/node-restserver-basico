@@ -19,3 +19,16 @@ npm install
 ```
 npm start
 ```
+
+## Crear un release Tag
+```
+git tag -a v1.0.0 -m "restserver basico"
+git push --tags
+```
+
+### En github.com Tags -> Edit release -> Purchase release 
+
+## Subir aplicacion a Heroku
+```
+
+```
