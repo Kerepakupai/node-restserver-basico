@@ -9,7 +9,7 @@ class Server {
 
     // Usuarios
     this.usuariosURI = '/api/usuarios'
-    this.usuariosRoutes = require('../routes/usuarios')
+    this.authURI = '/api/auth'
 
     // Conectar a base de datos
     this.conectarDB()
@@ -32,8 +32,8 @@ class Server {
   }
 
   routes () {
-    // Usuarios
-    this.app.use(this.usuariosURI, this.usuariosRoutes)
+    this.app.use(this.authURI, require('../routes/auth'))
+    this.app.use(this.usuariosURI, require('../routes/usuarios'))
   }
 
   listen () {

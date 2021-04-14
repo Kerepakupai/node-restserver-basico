@@ -56,10 +56,16 @@ const usuariosDelete = async (req, res = response) => {
 
   // borrado fisico
   // const usuario = await Usuario.findByIdAndDelete(id)
+  try {
+    const usuario = await Usuario.findByIdAndUpdate(id, { estado: false })
 
-  const usuario = await Usuario.findByIdAndUpdate(id, { estado: false })
-
-  res.json(usuario)
+    res.json(usuario)
+  } catch (error) {
+    console.log('No se puedo borrar el usuario')
+    res.status(500).send({
+      msg: 'Error borrando usuario'
+    })
+  }
 }
 
 module.exports = {
