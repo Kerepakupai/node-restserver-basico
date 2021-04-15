@@ -48,6 +48,6 @@ git push heroku main
 git rm .env --cached
 
 heroku config
-heroku config:set <VAR>"<VALUE>" 
+heroku config:set <VAR> ="<VALUE>" 
 heroku push heroku main
 ```
